@@ -2,7 +2,7 @@
 
 ## 开始
 
-在开始阅读该文档前，**请先查看官方的文档** [CONTRIBUTING.md](https://github.com/denoland/deno/blob/master/.github/CONTRIBUTING.md) **Deno团队出品你**。本文档主要是最为官方文档的一个补充。
+在开始阅读该文档前，**请先查看官方的文档** [CONTRIBUTING.md](https://github.com/denoland/deno/blob/master/.github/CONTRIBUTING.md) **Deno团队出品**。本文档主要是做为官方文档的一个补充。
 
 ## 测试release版本
 
