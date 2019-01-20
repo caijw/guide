@@ -27,8 +27,8 @@ If you are not familiar with Deno yet, we recommend checking out the following r
 This document has no affiliation with the `denoland` organization and its collaborators.
 
 ## Languages Support
-- [English](.)
-- [Chinese](./chinese)
+- [English](https://github.com/denolib/guide)
+- [Chinese](https://github.com/denolib/guide/chinese)
 
 
 

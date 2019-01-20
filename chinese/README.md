@@ -28,5 +28,5 @@
 
 
 ## 多语言支持
-- [英文](../)
-- [中文](.)
+- [英文](https://github.com/denolib/guide)
+- [中文](https://github.com/denolib/guide/chinese)

@@ -118,7 +118,7 @@ pub fn event_loop(&self) -> Result<(), JSError> {
 
 这就是一个循环，每一次，我们调用`self.is_idle()`检查是否还有事件没有得到响应。如果是，我们将会等待`self.rx`来接受一些消息或者一个由`setTimeout`创建的定时器超时，`self.rx`是消息通道的接收端。
 
-如果`self.rx`接受到一些消息，这意味着Tokio线程池里面有一个任务已经完成了。我们接下来将会把执行结果发送给`self.complete_op`来处理，执行结果是由`req_id`\(任务id\)和`buf`\(包含序列号响应的buffer\)两个组成的。`self.complete_op`根据`req_id`调用正在等待结果的代码，运行到结束。需要注意的是，这里被调用的代码，可能会加入更多的异步操作。
+如果`self.rx`接受到一些消息，这意味着Tokio线程池里面有一个任务已经完成了。我们接下来将会把执行结果发送给`self.complete_op`来处理，执行结果是由`req_id`\(任务id\)和`buf`\(包含序列化响应的buffer\)两个组成的。`self.complete_op`根据`req_id`调用正在等待结果的代码，运行到结束。需要注意的是，这里被调用的代码，可能会加入更多的异步操作。
 
 如果发生了超时，由`setTimeout`加入的代码将会被调用，然后运行到结束。
 
@@ -215,8 +215,6 @@ console.log(dec.decode(deno.readFileSync('d.c')));
 
 // END FILE
 ```
-
-The Deno process lifecycle control flow graph looks like this:
 
 Deno进程生命周期控制流图看起来像这样：
 

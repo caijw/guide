@@ -48,7 +48,7 @@ async function readFile(filename: string): Promise<Uint8Array> {
 libdeno.recv(handleAsyncMsgFromRust);
 ```
 
-`libdeno.recv`也是一个注入到V8的C++扩展函数，他用来注册接受消息的回调函数。了解更多的信息，请查看[下一节](todo_link)。
+`libdeno.recv`也是一个注入到V8的C++扩展函数，他用来注册接受消息的回调函数。了解更多的信息，请查看[下一节](https://github.com/denolib/guide/chinese/advanced/process-lifecycle.md)。
 
 让我们看看C++是如何处理接受到的的消息的。
 
@@ -118,5 +118,5 @@ int deno_respond(DenoIsolate* d, int32_t req_id, deno_buf buf) {
 
 ## Rust执行器
 
-函数调用之旅，进入到了最后的阶段。Rust代码映射不同类型的函数调用到相应的处理操作，并且同步和异步调用是基于事件循环的。对于事件循环的更多内容，请查看[下一节](todo_link)
+函数调用之旅，进入到了最后的阶段。Rust代码映射不同类型的函数调用到相应的处理操作，并且同步和异步调用是基于事件循环的。对于事件循环的更多内容，请查看[下一节](https://github.com/denolib/guide/chinese/advanced/process-lifecycle.md)
 
